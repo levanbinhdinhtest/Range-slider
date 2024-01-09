@@ -2,6 +2,8 @@ let range_bar = document.querySelector('.range-bar')
 let range = document.querySelector('.range')
 let percentText = document.querySelector('span')
 let body = document.querySelector('body')
+let inputRange = document.querySelector('input')
+let inputPercent = document.querySelector('.inputPercent')
 
 // e.pageX trong JavaScript là một thuộc tính của đối tượng sự kiện
 //  (event object) đại diện cho tọa độ ngang (the horizontal coordinate) 
@@ -39,3 +41,8 @@ range.addEventListener('mousemove',function(e){
     changeBar(percent)
 })
 changeBar(30)
+
+inputRange.addEventListener('change',function(e){
+    inputPercent.innerText = this.value +'%'
+    console.log(this.value)
+})
